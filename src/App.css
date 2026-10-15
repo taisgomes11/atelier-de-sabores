@@ -1,0 +1,1049 @@
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fffaf5;
+  color: #3d3028;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  color: #7c4226;
+  font-size: 2rem;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  background-color: #3b2418;
+  padding: 18px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-brand {
+  color: #f5d7a1;
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #f5d7a1;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #f3ebdd;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible,
+.menu a:focus-visible {
+  outline: 2px solid #d5b184;
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   HERO - CAPA PRINCIPAL
+========================================= */
+
+#inicio,
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 24px;
+
+  background-image:
+    linear-gradient(
+      rgba(30, 18, 12, 0.48),
+      rgba(30, 18, 12, 0.62)
+    ),
+    url("/imagens/capa-gastronomia.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-conteudo {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-destaque {
+  display: block;
+  margin-bottom: 24px;
+
+  color: #d5b184;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#inicio h1,
+.hero h1 {
+  margin: 0 0 24px;
+
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+#inicio p,
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 32px;
+
+  color: #f3ebdd;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.hero-botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.botao-principal,
+.hero .botao-secundario {
+  display: inline-block;
+  padding: 14px 28px;
+
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.botao-principal {
+  background-color: #b99463;
+  color: #211a15;
+}
+
+.botao-principal:hover {
+  background-color: #d5b184;
+  transform: translateY(-2px);
+}
+
+.hero .botao-secundario {
+  background: transparent;
+  border: 1px solid #d5b184;
+  color: #ffffff;
+}
+
+.hero .botao-secundario:hover {
+  background: #d5b184;
+  color: #211a15;
+}
+
+.hero a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   SOBRE A CHEF
+========================================= */
+
+#sobre {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.sobre-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre-texto {
+  text-align: left;
+}
+
+.sobre-destaque {
+  display: block;
+  margin-bottom: 16px;
+
+  color: #a67c52;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.sobre-texto h2 {
+  margin-top: 0;
+  margin-bottom: 28px;
+
+  color: #33241d;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.sobre-texto > p {
+  margin-bottom: 20px;
+
+  color: #51463f;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.sobre-imagem {
+  text-align: center;
+}
+
+.sobre-imagem .foto-chef {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  margin: 0 auto;
+
+  object-fit: cover;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-imagem > p {
+  margin-top: 18px;
+  font-style: italic;
+  color: #8b4b2b;
+}
+
+
+/* =========================================
+   DIFERENCIAIS DA CHEF
+========================================= */
+
+.sobre-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.sobre-diferenciais > div {
+  padding: 22px 12px;
+
+  background-color: #fffaf5;
+  border: 1px solid #d8b991;
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(51, 36, 29, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sobre-diferenciais > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(51, 36, 29, 0.15);
+}
+
+.sobre-diferenciais h3 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+
+  color: #8b4b2b;
+  font-size: 0.95rem;
+}
+
+.sobre-diferenciais p {
+  margin: 0;
+
+  color: #62564d;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SERVIÇOS GASTRONÔMICOS
+========================================= */
+
+#especialidades {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.secao-servicos {
+  text-align: center;
+}
+
+.secao-servicos .servicos-destaque {
+  display: block;
+  margin-bottom: 22px;
+
+  color: #a67c52;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.secao-servicos h2 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  line-height: 1.25;
+}
+
+.secao-servicos .servicos-introducao {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  line-height: 1.8;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  padding: 35px 25px;
+
+  background-color: white;
+  border-radius: 15px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #7c4226;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   PORTFÓLIO GASTRONÔMICO
+========================================= */
+
+#galeria,
+#portfolio {
+  text-align: center;
+}
+
+.portfolio-container {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.portfolio-destaque {
+  display: block;
+  margin-bottom: 22px;
+
+  color: #a67c52;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.portfolio-container h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.subtitulo {
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.portfolio-container .subtitulo {
+  max-width: 850px;
+  margin: 0 auto 40px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 40px;
+}
+
+.filtros button {
+  padding: 10px 20px;
+
+  border: 1px solid #a45c32;
+  border-radius: 25px;
+
+  background-color: transparent;
+  color: #7c4226;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.filtros button:hover,
+.filtros button.ativo {
+  background-color: #a45c32;
+  color: #ffffff;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+
+/* =========================================
+   CARDS DOS PRATOS
+========================================= */
+
+.prato-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background-color: white;
+  border-radius: 14px;
+
+  text-align: left;
+
+  box-shadow: 0 8px 24px rgba(51, 36, 29, 0.10);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.prato-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(51, 36, 29, 0.16);
+}
+
+.prato-card > img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.prato-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+
+  padding: 24px;
+  text-align: left;
+}
+
+.prato-info span {
+  margin-bottom: 12px;
+
+  color: #a67c52;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.prato-info h3 {
+  margin: 0 0 24px;
+
+  color: #33241d;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.botao-detalhes {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #8b4b2b;
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.botao-detalhes:hover {
+  background-color: #a67c52;
+}
+
+.botao-detalhes:focus-visible {
+  outline: 3px solid #b99463;
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   MODAL - DETALHES DOS PRATOS
+========================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(32, 21, 16, 0.78);
+}
+
+.modal-conteudo {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 55px 24px 28px;
+
+  background: #fffaf5;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+
+  text-align: center;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #38241f;
+  color: #ffffff;
+
+  font-size: 23px;
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.modal-fechar:hover {
+  background: #8b4b2b;
+}
+
+.modal-categoria {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #a45c32;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.modal-conteudo h3 {
+  margin: 0 0 12px;
+
+  color: #38241f;
+  font-size: 1.45rem;
+}
+
+.modal-conteudo p {
+  margin: 0;
+
+  color: #625047;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   IMAGENS E ÁLBUM DOS PRATOS
+========================================= */
+
+.modal-conteudo > img,
+.modal-imagem-container img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: 240px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+.modal-conteudo > img {
+  margin-bottom: 18px;
+}
+
+.modal-imagem-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.modal-seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(56, 36, 31, 0.85);
+  color: #ffffff;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.modal-seta:hover {
+  background: #a45c32;
+}
+
+.modal-seta-esquerda {
+  left: 10px;
+}
+
+.modal-seta-direita {
+  right: 10px;
+}
+
+
+/* =========================================
+   CONTATO / ORÇAMENTO
+========================================= */
+
+#contato {
+  background-color: #f4e9df;
+  padding: 75px 20px;
+}
+
+.contato-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contato-container h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 7px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 13px;
+
+  border: 1px solid #cbb8aa;
+  border-radius: 7px;
+
+  font: inherit;
+  background-color: white;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #a45c32;
+  box-shadow: 0 0 0 3px rgba(164, 92, 50, 0.15);
+}
+
+form button {
+  margin-top: 20px;
+  padding: 13px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #a45c32;
+  color: white;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #7c4226;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+  padding: 25px;
+  background-color: #3b2418;
+  color: white;
+  text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
+
+@media (max-width: 1100px) {
+  .sobre-diferenciais {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-container,
+  .galeria-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sobre-container {
+    gap: 35px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    position: relative;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 20px;
+
+    background: #25201d;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    z-index: 1000;
+  }
+
+  .menu.menu-aberto {
+    display: flex;
+  }
+
+  .menu a {
+    color: #f3ebdd;
+  }
+
+  #inicio,
+  .hero {
+    min-height: 450px;
+    padding: 75px 20px;
+    background-position: center;
+  }
+
+  #inicio h1,
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  #inicio p,
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-destaque {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-botoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-botoes a {
+    width: min(100%, 280px);
+  }
+
+  #sobre {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .sobre-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .sobre-imagem .foto-chef {
+    height: auto;
+    max-height: 450px;
+  }
+
+  .sobre-diferenciais {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cards-container,
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #especialidades {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  .portfolio-container {
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - TELAS PEQUENAS
+========================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: 92%;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-conteudo {
+    padding: 52px 16px 22px;
+  }
+
+  .modal-conteudo > img,
+  .modal-imagem-container img {
+    height: 200px;
+  }
+
+  .modal-conteudo h3 {
+    font-size: 1.25rem;
+  }
+
+  .modal-seta {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+  }
+
+  .prato-card > img {
+    height: 220px;
+  }
+
+  .filtros button {
+    font-size: 0.9rem;
+    padding: 9px 15px;
+  }
+}
+
+
+
+/* ===== AJUSTE FINAL DA CAPA ===== */
+
+/* Título principal: restaurar tamanho anterior */
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.2;
+  max-width: 850px;
+  margin: 0 auto 28px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.65);
+}
+
+/* Descrição: branco forte e em negrito */
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 32px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* ===== ICONES DOS SERVICOS ===== */
+
+.card-servico-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+
+  color: #a67c52;
+  background-color: #f8efe5;
+  border-radius: 50%;
+}
+
+.card-servico-icone svg {
+  width: 30px;
+  height: 30px;
+}
+
